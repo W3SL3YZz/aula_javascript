@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-widht, initial-scale=1">
+	<title>Canvas</title>
+</head>
+<body>
+	<canvas id="meu_canvas" widht ="300" height="300"> </canvas>
+	<script>
+		// canvas e contexto
+		var canvas = document.getElementById('meu_canvas');
+		var context = canvas.getContext('2d');
+
+
+		// preenchimento vermelho 
+
+		context.fillStyle = 'red'; // dentro do arco
+		context.fillRect(50,50,100,100);
+
+		// contorno azul, com espessura de 3px
+		context.lineWidht = 3;
+		context.strokeStyle = 'blue';
+		context.strokeRect(50, 50, 100, 100)
+
+	</script>
+</body>
+</html>

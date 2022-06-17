@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-widht, initial-scale=1">
+	<title>Canvas</title>
+</head>
+<body>
+	<canvas id="meu_canvas" widht ="300" height="300"> </canvas>
+	<script>
+		// canvas e contexto
+		var canvas = document.getElementById('meu_canvas');
+		var context = canvas.getContext('2d');
+
+
+		// cores e espessura d linha 
+
+		context.fillStyle = 'gray'; // dentro do arco
+		context.strokeStyle = 'black'; // linha
+		context.lineWidht = 2; //espesura da linha 
+
+		// Primeiro arco:
+
+		// Novo path:
+		context.beginPath();
+
+		// Desenho
+		context.arc(50,50,40,  90*Math.PI/180, 270*Math.PI/180, false); /* ARCO */
+
+		// Preenchimento
+		context.fill();
+
+		// Contorno
+		context.stroke();
+
+		// Segundo arco:
+
+		// Novo path:
+		context.beginPath();
+
+		// Desenho
+		context.arc(150,50,40, 90*Math.PI/180, 270*Math.PI/180, true); /* ARCO */
+
+		// Preenchimento
+		context.fill();
+
+		// Contorno
+		context.stroke();
+
+		// CIRCUFERENCIA COMPLETA
+
+		// Novo path:
+		context.beginPath();
+		
+		// Desenho
+		context.arc(250,50,40,0, 2*Math.PI); /* ARCO */
+
+		// Preenchimento
+		context.fill();
+
+		// Contorno
+		context.stroke();
+
+
+	</script>
+</body>
+</html>
